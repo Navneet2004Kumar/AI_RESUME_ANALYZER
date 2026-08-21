@@ -1,0 +1,66 @@
+.button {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.button button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(100deg, #7C6CF6, #38BDF8);
+    color: #0A0C10;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    border: none;
+    padding: 15px 40px;
+    font-size: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(124, 108, 246, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.button button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.button button:hover::before {
+    left: 125%;
+}
+
+.button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(124, 108, 246, 0.5);
+    filter: brightness(1.06);
+}
+
+.button button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(124, 108, 246, 0.35);
+}
+
+.button button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: grayscale(0.3);
+    transform: none;
+    box-shadow: 0 4px 12px rgba(124, 108, 246, 0.2);
+}
+
+.button button:disabled::before {
+    display: none;
+}

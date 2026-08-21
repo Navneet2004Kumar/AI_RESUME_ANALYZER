@@ -1,0 +1,97 @@
+.upload-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.upload-box {
+    width: 600px;
+    max-width: 100%;
+    padding: 44px;
+    background: #12151C;
+    border: 1px solid rgba(124, 108, 246, 0.25);
+    border-radius: 18px;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+        0 24px 48px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(124, 108, 246, 0.08);
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: rgba(124, 108, 246, 0.5);
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+        0 24px 48px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(124, 108, 246, 0.16);
+}
+
+.upload-box h2 {
+    color: #E7E9EE;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+}
+
+.upload-box p {
+    color: #9AA1AC;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.upload-box input[type="file"] {
+    font-size: 14px;
+    color: #C9CDD6;
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed rgba(124, 108, 246, 0.35);
+    border-radius: 10px;
+    background: #0F1218;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.upload-box input[type="file"]:hover {
+    border-color: rgba(124, 108, 246, 0.6);
+    background: #12151C;
+}
+
+.upload-box input::file-selector-button {
+    background: linear-gradient(100deg, #7C6CF6, #6857E8);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-right: 14px;
+    transition: filter 0.2s ease;
+}
+
+.upload-box input::file-selector-button:hover {
+    filter: brightness(1.1);
+}
+
+.file-details {
+    margin-top: 24px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: #1C2029;
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-details p {
+    margin: 0;
+    color: #E7E9EE;
+    font-size: 14px;
+}
